@@ -1,0 +1,606 @@
+@use "../../../assets/remConverter" as *;
+
+.container {
+  padding: rem(64) 0;
+  overflow: hidden;
+
+  .hero_img {
+    position: absolute;
+    width: 100%;
+    height: 75vh;
+    background-image: url("https://w.ladicdn.com/s1440x649/5b57f38472976020da8e5611/background-lp-xanh-camshape-20200801192138.png");
+    background-size: cover;
+  }
+
+  .content {
+    width: 960px;
+    position: relative;
+    margin: 0 auto;
+
+    .img_00 {
+      background-image: url("https://w.ladicdn.com/s700x950/5b57f38472976020da8e5611/mia-copy-20200904091355.png");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 40%;
+      height: rem(600);
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(10%);
+    }
+
+    .img_01 {
+      background-image: url("https://w.ladicdn.com/s850x700/5b57f38472976020da8e5611/1-kem-1-tu-do-lua-chon-text-all-20200801205644.png");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 60%;
+      height: rem(500);
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(30%, 10%);
+    }
+
+    .img_02 {
+      background-image: url("https://w.ladicdn.com/s750x700/5b57f38472976020da8e5611/o-bao-ve-1shape-20200801220747.png");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 40%;
+      height: rem(600);
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-30%, 35%);
+      rotate: -20deg;
+      z-index: 2;
+    }
+
+    .img_03 {
+      background-image: url("https://w.ladicdn.com/s700x700/5b57f38472976020da8e5611/png-khoa-truc-tuyen-uu-dai-tron-bo-20200323113905.png");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 40%;
+      height: rem(600);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      transform: translate(0%, 45%);
+    }
+
+    .img_04 {
+      background-image: url("https://w.ladicdn.com/s700x600/5b57f38472976020da8e5611/shape-tron-1shape-20200801192923.png");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 40%;
+      height: rem(600);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      transform: translate(0%, 55%);
+    }
+
+    .btn_00 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 3;
+      padding: rem(10) rem(80);
+      transform: translate(10%, rem(580));
+      border-radius: rem(10);
+      border: none;
+      background-color: #d92e2e;
+      color: #fff;
+      font-size: rem(20);
+      font-weight: 600;
+      cursor: pointer;
+
+      animation: blink-animation 1.5s infinite ease-in-out;
+
+      @keyframes blink-animation {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+
+    .gap_fill {
+      height: 75vh;
+    }
+
+    .context_00 {
+      position: relative;
+
+      .text_00,
+      .text_01 {
+        font-size: rem(32);
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      .text_00 {
+        margin-top: rem(32);
+        color: rgb(47, 47, 150);
+      }
+
+      .text_01 {
+        color: rgb(248, 45, 45);
+      }
+
+      .text_02 {
+        margin-top: rem(16);
+        color: rgb(85, 73, 73);
+        font-weight: bold;
+      }
+
+      .list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: rem(50);
+        gap: rem(30);
+
+        .item {
+          display: flex;
+          width: 100%;
+          gap: rem(20);
+          img {
+            width: rem(150);
+            height: rem(150);
+            border-radius: 50%;
+          }
+          &.reverse {
+            flex-direction: row-reverse;
+          }
+
+          .body {
+            width: 60%;
+
+            .title {
+              font-size: rem(20);
+              font-weight: 600;
+              color: rgb(47, 47, 150);
+            }
+
+            .text {
+              font-size: rem(13);
+            }
+          }
+        }
+      }
+
+      .text_04,
+      .text_05,
+      .text_06 {
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .text_04 {
+        width: 50%;
+        margin: rem(48) auto;
+        font-style: italic;
+      }
+
+      .text_05,
+      .text_06 {
+        font-size: rem(20);
+        text-transform: uppercase;
+      }
+    }
+
+    .context_01 {
+      position: relative;
+      margin: rem(100) auto;
+      padding: rem(50) 0;
+      background-color: rgb(231, 237, 250);
+      height: rem(1000);
+
+      .background {
+        width: 100vw;
+        height: 100%;
+        background-color: rgb(231, 237, 250);
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+      }
+
+      .text_07 {
+        font-size: rem(32);
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        color: rgb(48, 48, 114);
+
+        span {
+          color: rgb(248, 45, 45);
+        }
+      }
+
+      .text_08 {
+        text-align: center;
+      }
+
+      .text_09 {
+        font-size: rem(13);
+        text-align: center;
+        font-style: italic;
+        width: 70%;
+        margin: rem(30) auto;
+      }
+
+      .text_10 {
+        font-size: rem(16);
+        font-weight: 600;
+        text-align: center;
+      }
+
+      .shape_00 {
+        width: 15%;
+        height: rem(200);
+        background-image: url("https://w.ladicdn.com/s500x500/5b57f38472976020da8e5611/cute-1shape-20200801221109.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-250%, -10%);
+      }
+
+      .shape_01,
+      .shape_02,
+      .shape_03 {
+        background-image: url("https://w.ladicdn.com/s350x350/5b57f38472976020da8e5611/money-shape-2shape-20200801222323.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+      }
+
+      .shape_01 {
+        width: 10%;
+        height: rem(15);
+        bottom: 0;
+        left: 15%;
+        transform: translateY(rem(-320));
+      }
+
+      .shape_02 {
+        width: 10%;
+        height: rem(30);
+        bottom: 0;
+        left: 7%;
+        transform: translateY(rem(-280));
+      }
+
+      .shape_03 {
+        width: 10%;
+        height: rem(30);
+        bottom: 0;
+        left: 14%;
+        transform: translateY(rem(-230));
+      }
+
+      .btn_01 {
+        width: 30%;
+        margin: rem(60) auto;
+        padding: rem(10) rem(20);
+        border-radius: rem(10);
+        border: none;
+        background-color: #d92e2e;
+        color: #fff;
+        font-size: rem(20);
+        font-weight: 600;
+        cursor: pointer;
+        display: block;
+        text-align: center;
+        animation: scale-animation 1s infinite ease-in-out;
+
+        @keyframes scale-animation {
+          0%,
+          100% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      .list_pros {
+        display: flex;
+        gap: rem(30);
+        margin-top: rem(50);
+        margin-bottom: rem(150);
+
+        .item_pros {
+          width: 25%;
+
+          img {
+            width: 100%;
+            height: 50%;
+            object-fit: cover;
+          }
+
+          .title_pros {
+            font-size: rem(15);
+            font-weight: 600;
+            margin-bottom: rem(20);
+          }
+
+          .text_pros {
+            font-size: rem(12);
+          }
+        }
+      }
+    }
+
+    .context_02 {
+      position: relative;
+
+      h1,
+      p {
+        text-align: center;
+      }
+
+      h1 {
+        font-size: rem(32);
+        font-weight: 600;
+        color: black;
+
+        span {
+          color: rgb(248, 45, 45);
+        }
+      }
+
+      .shape_04 {
+        background-image: url("https://w.ladicdn.com/s450x450/5b57f38472976020da8e5611/dua-hau-chayshape-20200801224354.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 10%;
+        height: rem(150);
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: run-animation 8s infinite ease-in-out;
+
+        @keyframes run-animation {
+          0% {
+            transform: translate(-100%, 50%);
+            opacity: 0.5;
+          }
+          20% {
+            transform: translate(50%, 50%);
+            opacity: 1;
+          }
+          40% {
+            transform: translate(300%, 50%);
+            opacity: 1;
+          }
+          60% {
+            transform: translate(550%, 50%);
+            opacity: 1;
+          }
+          80% {
+            transform: translate(820%, 50%);
+            opacity: 1;
+          }
+          100% {
+            transform: translate(1000%, 50%);
+            opacity: 0;
+          }
+        }
+      }
+
+      .roadmap {
+        display: flex;
+        gap: rem(30);
+        justify-content: space-evenly;
+        margin-top: rem(150);
+
+        .item_roadmap {
+          width: 20%;
+          .name_roadmap {
+            text-align: center;
+            color: black;
+            font-weight: 600;
+            font-size: rem(16);
+            border-bottom: 1px solid black;
+          }
+          .title_roadmap {
+            font-size: rem(16);
+            color: black;
+            text-align: center;
+            margin-bottom: rem(16);
+          }
+          .text_roadmap {
+            font-size: rem(13);
+            text-align: center;
+            width: 80%;
+            margin: 0 auto;
+          }
+        }
+      }
+
+      .btn_02 {
+        width: 30%;
+        margin: rem(60) auto;
+        padding: rem(10) rem(20);
+        border-radius: rem(10);
+        border: none;
+        background-color: #d92e2e;
+        color: #fff;
+        display: block;
+        text-align: center;
+        cursor: pointer;
+        font-size: rem(20);
+      }
+    }
+
+    .context_03 {
+      position: relative;
+
+      h1 {
+        text-align: center;
+        font-size: rem(32);
+        font-weight: 600;
+      }
+
+      .list_info {
+        display: flex;
+        gap: rem(30);
+        margin-top: rem(30);
+      }
+
+      .item_info {
+        display: flex;
+        flex-direction: column;
+        gap: rem(30);
+        margin-top: rem(30);
+
+        img {
+          width: rem(300);
+          height: rem(300);
+          border-radius: 50%;
+        }
+
+        .title_info {
+          font-size: rem(16);
+          font-weight: 600;
+          text-align: center;
+          height: rem(80);
+          color: rgb(177, 14, 14);
+        }
+
+        .text_info {
+          font-size: rem(13);
+        }
+      }
+      h2 {
+        text-align: center;
+        margin-top: rem(50);
+      }
+
+      .btn_03 {
+        width: 30%;
+        margin: rem(30) auto;
+        padding: rem(10) rem(20);
+        border-radius: rem(10);
+        border: none;
+        background-color: #d92e2e;
+        color: #fff;
+        display: block;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .shape_05 {
+        width: 10%;
+        height: rem(150);
+        background-image: url("https://w.ladicdn.com/s450x400/5b57f38472976020da8e5611/dua-hau-2shape-20200801223816.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translate(200%, 0%);
+        rotate: 10deg;
+      }
+    }
+
+    .context_04 {
+      margin-top: rem(50);
+
+      h1,
+      h2 {
+        text-align: center;
+      }
+
+      h1 {
+        text-transform: uppercase;
+        font-size: rem(32);
+        font-weight: bold;
+        margin-bottom: rem(20);
+      }
+
+      .teacher_wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: rem(50);
+        justify-content: center;
+        align-items: center;
+
+        .teacher {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: rem(50);
+
+          img {
+            border-radius: 50%;
+            width: rem(150);
+            height: rem(150);
+            border: 5px solid rgb(61, 95, 246);
+          }
+          .body {
+            margin-left: rem(20);
+            h3 {
+              font-size: rem(20);
+              margin-bottom: rem(20);
+              border-bottom: 1px solid rgb(17, 37, 122);
+              font-weight: bold;
+              span {
+                color: red;
+              }
+            }
+
+            li {
+              font-size: rem(14);
+              list-style-type: none;
+
+              &::before {
+                content: "- ";
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .context_05 {
+      margin-top: rem(50);
+    }
+  }
+}
+.context_00,
+.context_01,
+.context_02,
+.context_03,
+.context_04,
+.context_05,
+.context_06 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

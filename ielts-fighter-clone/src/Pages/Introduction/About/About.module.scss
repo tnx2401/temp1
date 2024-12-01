@@ -1,0 +1,327 @@
+@use "../../../assets/remConverter" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+
+  .hero_img {
+    background-image: url("https://w.ladicdn.com/s1440x494/5b57f38472976020da8e5611/97cdbe05-7515-40d4-9c07-952d7ed2ab7a-20231110043146-veymu.jpg");
+    background-size: cover;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    width: 100%;
+    height: rem(600);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content {
+    width: 960px;
+
+    .context_00 {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: rem(150);
+
+      h1 {
+        font-size: rem(40);
+        margin: rem(32) rem(0);
+        font-weight: 500;
+      }
+
+      .wrapper {
+        display: flex;
+        position: relative;
+        gap: rem(50);
+
+        .text {
+          width: 60%;
+
+          p {
+            margin-bottom: rem(24);
+          }
+        }
+
+        .img {
+          #img_1 {
+            background-image: url("https://w.ladicdn.com/s750x750/5b57f38472976020da8e5611/screenshot-2023-10-12-111922-20231012042021-8x2q_.png");
+            width: rem(500);
+            height: rem(500);
+            background-size: cover;
+            border-radius: 100%;
+            position: absolute;
+          }
+
+          #img_2 {
+            background-image: url("https://w.ladicdn.com/s550x550/5b57f38472976020da8e5611/hai-dang-75-20231108090036-z_pdq.jpg");
+            translate: rem(300) rem(150);
+          }
+          #img_3 {
+            background-image: url("https://w.ladicdn.com/s550x550/5b57f38472976020da8e5611/339128101_129089846800784_7606475916268109229_n-20230921141259-rrohj.jpg");
+            translate: rem(-100) rem(400);
+          }
+
+          #img_2,
+          #img_3 {
+            width: rem(250);
+            height: rem(250);
+            background-size: cover;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
+        }
+      }
+    }
+
+    .context_01 {
+      h1 {
+        font-size: rem(40);
+        margin: rem(32) rem(0);
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+
+      .wrapper {
+        display: flex;
+        gap: rem(50);
+        justify-content: space-between;
+      }
+    }
+
+    .context_02 {
+      display: flex;
+      gap: rem(30);
+      margin: rem(36) 0;
+
+      h1 {
+        font-weight: bold;
+        font-size: rem(18);
+        margin: rem(16) 0;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        height: rem(500);
+        border-radius: rem(8);
+        border: 1px solid black;
+        box-shadow: 1px 1px 1px rgb(86, 83, 83);
+
+        div {
+          width: rem(300);
+          height: rem(200);
+          border-top-left-radius: rem(8);
+          border-top-right-radius: rem(8);
+          background-size: cover;
+        }
+
+        h3 {
+          font-weight: bold;
+          margin: rem(16) 0;
+          padding: 0 rem(16);
+        }
+
+        p {
+          padding: 0 rem(16);
+        }
+      }
+    }
+
+    .context_03 {
+      padding: rem(64) 0;
+      padding-left: rem(20);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+
+      .card {
+        h1 {
+          padding: rem(8);
+          font-size: rem(8);
+          font-weight: bold;
+          text-align: center;
+        }
+
+        div {
+          background-size: cover;
+          width: 300px;
+          height: rem(150);
+        }
+      }
+    }
+
+    .context_04 {
+      width: 100%;
+      height: rem(600);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .background_01 {
+        background-image: url("../../../assets/about-img.jpg");
+        height: rem(300);
+        width: 100%;
+        background-size: cover;
+      }
+
+      .background_02 {
+        background-image: url("https://w.ladicdn.com/s1300x600/5b57f38472976020da8e5611/screenshot-2023-11-10-145424-20231110075613-sfpfz.png");
+        height: rem(300);
+        width: 100%;
+        background-size: contain;
+      }
+    }
+
+    .context_05 {
+      margin-bottom: rem(100);
+    }
+  }
+
+  .text_bold {
+    font-weight: bold;
+  }
+
+  .context_00,
+  .context_01,
+  .context_02,
+  .context_03,
+  .context_04,
+  .context_05 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .container {
+    .content {
+      .context_00 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
+
+        h1 {
+          width: 50%;
+          text-align: center;
+        }
+
+        .wrapper {
+          flex-direction: column;
+          align-items: center;
+
+          .text {
+            width: 50%;
+            max-width: 80%;
+            margin: 0 auto;
+          }
+
+          .img {
+            display: none;
+          }
+        }
+      }
+
+      .context_01 {
+        h1 {
+          width: 50%;
+          text-align: center;
+          margin: 0 auto;
+        }
+
+        .wrapper {
+          width: 50%;
+          flex-direction: column;
+          gap: rem(20);
+          margin: 0 auto;
+        }
+      }
+
+      .context_02 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+
+        .card {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 0 auto;
+        }
+      }
+
+      .context_03 {
+        display: flex;
+        flex-direction: column;
+        gap: rem(20);
+      }
+
+      .context_04 {
+        .background_01 {
+          width: 50%;
+          height: rem(200);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+
+        .background_02 {
+          width: 50%;
+          height: rem(200);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
+
+      .context_01,
+      .context_02,
+      .context_03,
+      .context_04,
+      .context_05 {
+        .wrapper {
+          flex-direction: column;
+          gap: rem(20);
+
+          .text,
+          .img {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .hero_img {
+      height: rem(200);
+    }
+  }
+}

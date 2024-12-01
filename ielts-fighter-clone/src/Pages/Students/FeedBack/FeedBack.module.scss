@@ -1,0 +1,267 @@
+@use "../../../assets/remConverter" as *;
+
+.container {
+  padding: rem(64) 0;
+  width: 100%;
+
+  .hero_img {
+    background-image: url("https://w.ladicdn.com/s1440x494/5b57f38472976020da8e5611/banner-1-20231027025858-pylwk.png");
+    width: 100%;
+    height: rem(500);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+  }
+
+  .content {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .wrapper {
+      position: relative;
+      width: 960px;
+
+      .img_00 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(23%, 20%);
+        background-size: contain;
+        background-image: url("https://w.ladicdn.com/s550x650/5b57f38472976020da8e5611/nguyen-tam-80-20231026084806-sa2kw.png");
+        width: 100%;
+        height: rem(300);
+        background-repeat: no-repeat;
+      }
+
+      .img_01 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(2%, 20%);
+        background-size: contain;
+        background-image: url("https://w.ladicdn.com/s600x600/5b57f38472976020da8e5611/minh-triet-75-20231026084801-ysgcu.png");
+        width: 100%;
+        height: rem(300);
+        background-repeat: no-repeat;
+      }
+
+      .img_02 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-5%, 42.5%);
+        background-size: contain;
+        background-image: url("https://w.ladicdn.com/s600x750/5b57f38472976020da8e5611/prc09695-20231010024430-ffh4f.png");
+        width: 100%;
+        height: rem(350);
+        background-repeat: no-repeat;
+        z-index: 2;
+      }
+
+      .img_03 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(20%, 56%);
+        background-size: contain;
+        background-image: url("https://w.ladicdn.com/s600x650/5f487d565cb76a69ecc8c987/thanh-hai-80-ielts-20231010043019-utnq8.png");
+        width: 100%;
+        height: rem(320);
+        background-repeat: no-repeat;
+        z-index: 2;
+      }
+
+      .img_04 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(10%, 30%);
+        background-size: contain;
+        background-image: url("https://w.ladicdn.com/s650x650/5f487d565cb76a69ecc8c987/nguyen-minh-khoi-75-20231010043034-gd7a_.png");
+        width: 100%;
+        height: rem(320);
+        background-repeat: no-repeat;
+        z-index: 1;
+      }
+      .img_05 {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        transform: translate(10%, 100%);
+        background-size: contain;
+        background-image: url("https://w.ladicdn.com/s600x600/5f487d565cb76a69ecc8c987/ngoc-lan-80-ielts-20231010043028-4hofe.png");
+        width: 100%;
+        height: rem(250);
+        background-repeat: no-repeat;
+      }
+
+      .context_00 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(20%, 100%);
+        width: 500px;
+        height: auto;
+        background-color: rgb(255, 255, 255);
+        border-radius: rem(16);
+        padding: rem(16);
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+
+    .gap_fill {
+      height: 50vh;
+      width: 100%;
+    }
+
+    .context_01 {
+      margin-top: rem(24);
+      position: relative;
+      width: 80%;
+
+      img {
+        height: rem(300);
+        padding: rem(16);
+      }
+    }
+
+    .context_02 {
+      background-image: url("https://w.ladicdn.com/s1440x914/5b57f38472976020da8e5611/14226-20231107061347-urelq.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: rem(900);
+      position: relative;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .paragraph_00,
+      .paragraph_01 {
+        margin-top: rem(16);
+        font-size: rem(40);
+        font-weight: 600;
+        color: rgb(195, 9, 19);
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .paragraph_01 {
+        margin: 0;
+        font-size: rem(35);
+        color: rgb(5, 34, 74);
+      }
+
+      .paragraph_02 {
+        color: rgb(5, 34, 74);
+        text-align: center;
+        font-style: italic;
+      }
+
+      .paragraph_03 {
+        background-image: url("https://w.ladicdn.com/s400x400/5b57f38472976020da8e5611/cam-ket-dau-ra-1-20230927093922-t2dyv.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: rem(100);
+        width: rem(100);
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-110%, 20%);
+      }
+
+      .video_item {
+        height: rem(300);
+        margin: rem(50) 0;
+      }
+
+      .card_item {
+        border-radius: 10px;
+        position: relative;
+        padding-top: rem(16);
+
+        .card_img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 100;
+          transform: translate(50%, 0%);
+          img {
+            border-radius: 100%;
+            width: rem(80);
+            height: rem(80);
+          }
+        }
+        .card_head {
+          display: flex;
+          position: relative;
+          background-color: rgb(18, 52, 100);
+          padding-left: rem(20);
+          border-radius: 10px 10px 0 0;
+          margin: 0 rem(10);
+
+          .card_info {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1.6;
+            color: rgb(255, 222, 89);
+            text-align: left;
+            padding: rem(16);
+            padding-left: rem(100);
+          }
+        }
+
+        .card_body {
+          margin: 0 rem(10);
+          border-radius: 0 0 10px 10px;
+          background-color: rgb(18, 52, 100);
+          padding: rem(16);
+          color: white;
+          font-size: rem(12);
+          height: rem(150);
+        }
+      }
+    }
+  }
+
+  .customArrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: rem(40);
+    height: rem(40);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    span {
+      color: white;
+      font-size: rem(20);
+    }
+  }
+
+  .prevArrow {
+    left: rem(-50);
+  }
+
+  .nextArrow {
+    right: rem(-50);
+  }
+}

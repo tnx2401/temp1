@@ -1,0 +1,16 @@
+@use "../remConverter" as *;
+
+.container {
+  width: 100%;
+  height: rem(800);
+  display: flex;
+  margin-top: rem(100);
+  margin-bottom: rem(50);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+  h1 {
+    font-size: rem(20);
+  }
+}

@@ -1,0 +1,63 @@
+@use "../assets/remConverter" as *;
+
+.container {
+  width: rem(450);
+  height: rem(450);
+  background-color: rgb(42, 37, 37);
+  border-radius: rem(9);
+  padding: rem(10);
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  .context {
+    display: flex;
+    flex-direction: column;
+    padding: rem(10);
+
+    h1 {
+      font-size: rem(24);
+      margin-bottom: rem(10);
+      font-weight: 500;
+      color: rgb(212, 68, 68);
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      font-size: rem(14);
+      margin-bottom: rem(4);
+      color: rgb(255, 255, 255);
+    }
+
+    a {
+      text-decoration: none; /* Remove underline */
+      color: rgb(255, 255, 255); /* Default text color */
+      font-weight: 400;
+
+      &:hover {
+        color: rgb(251, 99, 99); /* Change color on hover */
+        text-decoration: underline; /* Underline on hover */
+      }
+
+      &:active {
+        color: rgb(200, 0, 0); /* Change color on active */
+      }
+    }
+
+    .vertical_line {
+      position: absolute;
+      left: rem(215);
+      border-left: 1px solid rgb(255, 255, 255);
+    }
+    .horizontal_line {
+      position: absolute;
+      top: 60%;
+      border-bottom: 1px solid rgb(255, 255, 255);
+      width: 90%;
+    }
+  }
+}

@@ -1,0 +1,482 @@
+@use "../../../assets/remConverter" as *;
+
+.container {
+  width: 100%;
+  padding: rem(64) 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  .hero_img {
+    background-image: url("https://w.ladicdn.com/s1440x533/5b57f38472976020da8e5611/screenshot-2023-10-02-20231002094714-ziv61.png");
+    height: rem(500);
+    background-size: cover;
+    width: 100%;
+
+    .wrapper {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+
+      display: flex;
+      justify-content: center;
+      gap: rem(48);
+      padding-top: rem(70);
+
+      .text {
+        text-transform: uppercase;
+        font-weight: bolder;
+        width: 20%;
+
+        h1 {
+          font-size: rem(36);
+          color: rgb(232, 188, 11);
+          margin-bottom: rem(16);
+        }
+
+        h2 {
+          font-size: rem(20);
+          color: white;
+        }
+      }
+
+      .video {
+        padding: rem(10);
+        height: rem(335);
+        background-color: aliceblue;
+      }
+    }
+  }
+
+  .content {
+    width: 960px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .context_00 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .paragraph_00 {
+        color: red;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: rem(32);
+        margin-top: rem(32);
+
+        span {
+          font-family: "Dancing Script", cursive !important;
+          line-height: 1.6;
+          color: rgb(0, 0, 0);
+          text-transform: capitalize;
+        }
+      }
+
+      .paragraph_01 {
+        text-transform: uppercase;
+        font-size: rem(24);
+      }
+
+      .line {
+        margin-top: rem(20);
+        width: rem(150);
+        border-bottom: 4px solid black;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        gap: rem(50);
+        width: 100%;
+
+        .left_img {
+          background-image: url("https://w.ladicdn.com/s800x750/5b57f38472976020da8e5611/phuong-phap-dao-tao-ripl-tai-ielts-fighter-2-20220104043312.jpg");
+          width: 150%;
+          height: rem(400);
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        .child_container {
+          .paragraph_02 {
+            h1 {
+              font-weight: bold;
+              margin-bottom: rem(20);
+            }
+          }
+          .right_img {
+            background-image: url("https://w.ladicdn.com/s750x600/5b57f38472976020da8e5611/screenshot-2023-11-17-144159-20231117074216-hjumy.png");
+            width: 100%;
+            height: rem(300);
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+    }
+
+    .context_01 {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .paragraph_03 {
+        position: relative;
+
+        h1 {
+          text-transform: uppercase;
+          font-size: rem(32);
+          font-weight: bold;
+        }
+
+        .shape {
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: -1;
+          width: 40%;
+          translate: 15%;
+        }
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        gap: rem(20);
+
+        .methods {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: rem(50);
+          position: relative;
+
+          .ripl_box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            translate: 175% 40%;
+            border-radius: 100%;
+            width: rem(100);
+            height: rem(100);
+            border: 1px solid orange;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            h1 {
+              font-size: rem(32);
+              padding-left: rem(4);
+              font-weight: bold;
+              letter-spacing: rem(6);
+              background-clip: inherit;
+              background: linear-gradient(rgb(251, 215, 43), rgb(249, 72, 74));
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+          }
+
+          button {
+            padding: rem(20);
+            width: rem(200);
+            font-size: rem(14);
+            border-radius: rem(8);
+            background-image: linear-gradient(
+              rgb(251, 215, 43),
+              rgb(249, 72, 74)
+            );
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+
+            &:hover {
+              background-image: linear-gradient(
+                rgb(252, 68, 12),
+                rgb(249, 72, 74)
+              );
+            }
+          }
+        }
+      }
+
+      .method_paragraph_container {
+        border: 1px solid black;
+        padding: rem(32);
+        border-radius: rem(8);
+
+        .card {
+          display: flex;
+          justify-content: center;
+
+          .paragraph_04 {
+            width: 100%;
+
+            h1 {
+              text-transform: uppercase;
+              display: inline-block;
+              border-radius: rem(8);
+              padding: rem(8);
+              text-align: center;
+              font-weight: bold;
+              background-image: linear-gradient(
+                rgb(251, 215, 43),
+                rgb(249, 72, 74)
+              );
+            }
+
+            h2 {
+              margin: rem(16) 0;
+              font-weight: bold;
+            }
+
+            p {
+              font-size: rem(13);
+            }
+          }
+
+          .img {
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+    }
+
+    .context_02 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: rem(50);
+
+      .paragraph_05 {
+        font-size: rem(30);
+        text-transform: uppercase;
+
+        h1 {
+          color: rgb(211, 8, 8);
+          font-weight: bold;
+        }
+
+        span {
+          font-family: "Dancing Script", cursive;
+          line-height: 1.6;
+          font-weight: 400;
+          color: rgb(0, 0, 0);
+          text-transform: none;
+          font-size: rem(40);
+          margin-left: rem(8);
+        }
+      }
+
+      .paragraph_06,
+      .paragraph_07 {
+        font-weight: bold;
+        font-size: rem(30);
+        text-transform: uppercase;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        gap: rem(50);
+
+        .left {
+          .img_00 {
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: rem(500);
+            height: rem(250);
+            background-image: url("https://w.ladicdn.com/s850x600/5b57f38472976020da8e5611/screenshot-31-20231117084514-aagq3.png");
+          }
+        }
+
+        .right {
+          .img_01 {
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: rem(450);
+            height: rem(450);
+            background-image: url("https://w.ladicdn.com/s750x700/5b57f38472976020da8e5611/screenshot-32-20231117084604-fl_yl.png");
+          }
+        }
+      }
+    }
+
+    .context_03 {
+      display: flex;
+      padding: rem(20);
+      justify-content: space-between;
+      background-color: rgb(201, 31, 23);
+
+      .left {
+        width: 45%;
+        color: white;
+
+        h1 {
+          font-weight: bold;
+          margin-bottom: rem(8);
+        }
+
+        p {
+          font-size: rem(14);
+        }
+      }
+      .right {
+        width: 50%;
+      }
+    }
+  }
+}
+
+.context_00,
+.context_01,
+.context_02,
+.context_03,
+.context_04 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media screen and (max-width: 960px) {
+  .container {
+    .hero_img {
+      height: rem(400);
+
+      .wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding-top: rem(30);
+        gap: rem(20);
+
+        .text {
+          width: 100%;
+          text-align: center;
+
+          h1 {
+            font-size: rem(28);
+          }
+
+          h2 {
+            font-size: rem(18);
+          }
+        }
+
+        .video {
+          display: none;
+        }
+      }
+    }
+
+    .content {
+      width: 100%;
+
+      .context_00 {
+        .paragraph_00,
+        .paragraph_01,
+        .paragraph_02 {
+          width: 100%;
+          text-align: center;
+        }
+
+        .container {
+          flex-direction: column;
+          align-items: center;
+
+          .left_img {
+            width: 100%;
+          }
+
+          .child_container {
+            flex-direction: column;
+            align-items: center;
+            .right_img {
+              width: 80%;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+
+      .context_01 {
+        flex-direction: column;
+        align-items: center;
+
+        .paragraph_03 {
+          text-align: center;
+
+          .shape {
+            display: none;
+          }
+        }
+
+        .container {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .method_paragraph_container {
+          .card {
+            flex-direction: column;
+          }
+        }
+      }
+
+      .context_02 {
+        flex-direction: column;
+        align-items: center;
+
+        .paragraph_06,
+        .paragraph_07 {
+          width: 100%;
+          text-align: center;
+          font-size: rem(20);
+        }
+
+        .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .left {
+            p {
+              width: 80%;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+
+      .context_03 {
+        flex-direction: column;
+
+        .left,
+        .right {
+          width: 100%;
+        }
+
+        .right {
+          margin-top: rem(20);
+        }
+      }
+
+      .context_04 {
+        width: rem(960);
+
+      }
+    }
+  }
+}

@@ -1,0 +1,678 @@
+@use "../../../assets/remConverter" as *;
+
+.container {
+  position: relative;
+  width: 100%;
+  padding: rem(64) 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #f5f5f5;
+
+  .hero_img {
+    width: 100%;
+    height: rem(800);
+    background-image: url("https://w.ladicdn.com/s2150x950/5b57f38472976020da8e5611/slide-20201230083318-20210107092801-20211121085453.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .content {
+    position: relative;
+    width: 960px;
+
+    .context_00 {
+      display: flex;
+      justify-content: center;
+      height: rem(675);
+      .left {
+        width: 100%;
+        padding-top: rem(50);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .btn_00 {
+          width: 50%;
+          height: rem(40);
+          background-color: rgb(255, 196, 8);
+          color: rgb(4, 57, 126);
+          border: none;
+          border-radius: rem(10);
+          margin-top: rem(50);
+          cursor: pointer;
+          font-weight: bold;
+          font-size: rem(20);
+          box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.314);
+          animation: scaleUp 1s infinite;
+
+          @keyframes scaleUp {
+            0%,
+            100% {
+              transform: scale(1);
+            }
+
+            50% {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+
+      .right {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-top: rem(200);
+
+        .img_01 {
+          background-image: url("https://w.ladicdn.com/s650x850/5b57f38472976020da8e5611/quy00240-m-20211028111552.png");
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          width: 100%;
+          height: rem(600);
+          animation: slideInFromRight 1s ease-out;
+
+          @keyframes slideInFromRight {
+            0% {
+              transform: translateX(50%);
+              opacity: 0;
+            }
+            100% {
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    .context_01 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: rem(50);
+
+      .item {
+        .body {
+          display: flex;
+          gap: rem(50);
+          align-items: center;
+          .image {
+            width: 100%;
+            height: rem(400);
+            background-repeat: no-repeat;
+          }
+
+          .text {
+            margin: rem(32) 0;
+            .title {
+              font-family: Roboto, "sans-serif";
+              font-size: rem(26);
+              font-weight: bold;
+              text-transform: uppercase;
+              margin-bottom: rem(30);
+            }
+            .subItem {
+              display: flex;
+              gap: rem(20);
+              .icon {
+                width: rem(70);
+                height: rem(70);
+              }
+            }
+            ul {
+              list-style-type: none;
+              li::before {
+                content: "✔️";
+              }
+            }
+          }
+          &.reverse {
+            flex-direction: row-reverse;
+          }
+        }
+      }
+    }
+
+    .context_02 {
+      position: relative;
+      margin-top: rem(50);
+      height: rem(550);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .wrapper {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw;
+        background-image: url("https://w.ladicdn.com/s1440x590/5b57f38472976020da8e5611/3325193-20200204030752.jpg");
+        height: rem(550);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        h1,
+        p {
+          text-align: center;
+        }
+
+        h1 {
+          font-weight: bolder;
+          color: rgb(17, 37, 122);
+          text-align: center;
+          font-size: rem(32);
+          margin: rem(20) 0;
+        }
+
+        p {
+          font-size: rem(14);
+        }
+
+        .card_wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: rem(20);
+          margin: rem(32) 0;
+
+          .card {
+            width: rem(300);
+            border: 3px dotted white;
+            height: rem(250);
+            background-color: rgba(255, 183, 0, 0.8);
+            box-shadow: rgba(8, 8, 8, 0.18) 2px 8px 20px 0px;
+            padding: rem(20);
+            border-radius: rem(10);
+            .title {
+              color: rgb(17, 37, 122);
+              font-size: rem(32);
+              font-weight: bold;
+            }
+            .text {
+              font-size: rem(14);
+              margin: rem(20) 0;
+            }
+          }
+        }
+        .btn_wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: rem(32) 0;
+          padding: rem(20);
+          .btn_01 {
+            width: rem(250);
+            height: rem(40);
+            background-color: rgba(255, 183, 0, 0.8);
+            color: rgb(17, 37, 122);
+            font-size: rem(16);
+            font-weight: bold;
+            box-shadow: rgba(8, 8, 8, 0.5) 2px 8px 20px 0px;
+            animation: scaleAnimation 1s ease-in-out infinite;
+            cursor: pointer;
+
+            @keyframes scaleAnimation {
+              0%,
+              100% {
+                transform: scale(1);
+              }
+              50% {
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .context_03 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: rem(50);
+      position: relative;
+
+      h1 {
+        font-size: rem(32);
+        font-weight: bold;
+        color: rgb(17, 37, 122);
+        text-align: center;
+        padding: rem(50);
+
+        &::after {
+          content: "";
+          display: block;
+          width: 25%;
+          height: rem(4);
+          background-color: rgb(246, 223, 50);
+          margin: rem(20) auto;
+        }
+      }
+
+      .img_02 {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: rem(400);
+        background-image: url("https://w.ladicdn.com/s750x850/5b57f38472976020da8e5611/quy00202-m-20211028111458.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .reason_wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        margin: rem(32) 0;
+        column-gap: rem(250);
+        row-gap: rem(20);
+
+        .reason {
+          display: flex;
+          gap: rem(20);
+
+          .title {
+            font-size: rem(16);
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+
+          .text {
+            font-size: rem(14);
+            width: 90%;
+            float: left;
+          }
+
+          .icon {
+            width: rem(50);
+            height: rem(50);
+          }
+
+          &.reverse {
+            flex-direction: row-reverse;
+            text-align: right;
+
+            .text {
+              float: right;
+            }
+          }
+        }
+      }
+    }
+
+    .context_04 {
+      display: flex;
+      margin-top: rem(50);
+      height: rem(1200);
+
+      .wrapper {
+        position: relative;
+        height: 100%;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+
+        .img_03 {
+          position: absolute;
+          background-image: url("https://w.ladicdn.com/s1440x1193/5b57f38472976020da8e5611/london-1562317040.jpg");
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          width: 100vw;
+          height: 100%;
+          z-index: 1;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(
+              9,
+              9,
+              106,
+              0.84
+            ); // Blue color with 50% opacity
+            z-index: 2;
+          }
+        }
+        h1,
+        p {
+          z-index: 3;
+          position: relative;
+          text-align: center;
+        }
+
+        h1 {
+          color: rgb(247, 232, 19);
+          font-size: rem(26);
+          text-transform: uppercase;
+          font-weight: bold;
+          padding-top: rem(50);
+          margin-bottom: rem(20);
+        }
+
+        p {
+          color: white;
+        }
+        .roadmap_wrapper {
+          margin-top: rem(50);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: rem(20);
+          z-index: 3;
+          width: 960px;
+          color: white;
+          position: relative;
+
+          .shape {
+            position: absolute;
+            width: rem(2);
+            height: rem(750);
+            background-color: rgb(255, 255, 255);
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          .shape_01 {
+            position: absolute;
+            width: 15%;
+            height: 5%;
+            top: -0.5%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+          }
+
+          .paragraph_04 {
+            color: rgb(4, 57, 126);
+            font-size: rem(20);
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+
+          .roadmap {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 80%;
+
+            &.right {
+              align-items: flex-end;
+            }
+
+            .title {
+              font-size: rem(20);
+              font-weight: bold;
+              color: rgb(248, 235, 47);
+              width: 50%;
+              padding-left: rem(8);
+            }
+
+            .text {
+              font-size: rem(16);
+              width: 50%;
+              border-bottom: 1px solid white;
+
+              ul {
+                padding-left: rem(28);
+              }
+            }
+          }
+        }
+
+        .btn_02 {
+          width: rem(250);
+          height: rem(40);
+          background-color: rgb(255, 196, 8);
+          color: rgb(4, 57, 126);
+          border: none;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: rem(16);
+          margin-top: rem(40);
+          animation: scaleUp 1s infinite;
+          cursor: pointer;
+
+          @keyframes scaleUp {
+            0%,
+            100% {
+              transform: scale(1);
+            }
+
+            50% {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+
+    .context_05 {
+      margin-top: rem(50);
+
+      h1,
+      h2 {
+        text-align: center;
+      }
+
+      h1 {
+        text-transform: uppercase;
+        font-size: rem(32);
+        font-weight: bold;
+        margin-bottom: rem(20);
+      }
+
+      .teacher_wrapper {
+        display: flex;
+        column-gap: rem(20);
+        justify-content: center;
+        align-items: center;
+
+        .teacher {
+          display: flex;
+          flex-direction: column;
+          height: rem(500);
+          width: rem(500);
+          align-items: center;
+          margin-top: rem(50);
+
+          img {
+            border-radius: 50%;
+            width: rem(150);
+            height: rem(150);
+            margin-bottom: rem(20);
+          }
+          .body {
+            h3 {
+              font-size: rem(20);
+              margin-bottom: rem(20);
+              font-weight: bold;
+              span {
+                color: red;
+              }
+            }
+
+            li {
+              font-size: rem(14);
+              list-style-type: none;
+              margin-top: rem(15);
+
+              &::before {
+                content: "- ";
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .context_06 {
+      margin-top: rem(50);
+      position: relative;
+      height: rem(1100);
+
+      .wrapper {
+        background-image: url("https://w.ladicdn.com/s1440x1020/5b57f38472976020da8e5611/write-1562319606.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 1;
+
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+      }
+
+      .body {
+        position: relative;
+        width: 960px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+          font-size: rem(32);
+          font-weight: bold;
+          text-transform: uppercase;
+          text-align: center;
+          padding: rem(30);
+          color: rgb(255, 225, 0);
+        }
+
+        .feedback_video_wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: rem(20);
+          margin-top: rem(50);
+          width: 100%;
+
+          .feedback_video {
+            width: 100%;
+            height: rem(250);
+            iframe {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+
+        .feedback_card_wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: rem(20);
+          margin-top: rem(50);
+
+          .feedback_card {
+            width: 100%;
+            height: rem(450);
+            background-color: rgb(255, 255, 255);
+            border-radius: rem(10);
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+            img {
+              width: 100%;
+              height: rem(200);
+            }
+
+            h3,
+            p {
+              padding: rem(10);
+            }
+
+            h3 {
+              font-size: rem(18);
+              font-weight: bold;
+            }
+            p {
+              font-size: rem(14);
+            }
+          }
+        }
+        .btn_03 {
+          width: rem(250);
+          height: rem(60);
+          background-color: rgb(255, 196, 8);
+          color: rgb(4, 57, 126);
+          border: none;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: rem(16);
+          border-radius: rem(10);
+          cursor: pointer;
+
+          margin: rem(64) 0;
+          animation: scaleUp 1s infinite;
+
+          @keyframes scaleUp {
+            0%,
+            100% {
+              transform: scale(1);
+            }
+
+            50% {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+
+    .context_07 {
+      padding-top: rem(50);
+    }
+  }
+}
+
+.context_01,
+.context_02,
+.context_03,
+.context_04,
+.context_05,
+.context_06,
+.context_07,
+.context_08 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,96 @@
+@use "../assets/remConverter" as *;
+
+.container {
+  background-color: red;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .footer {
+    width: 960px;
+    height: 90%;
+    display: flex;
+    padding: rem(16);
+    gap: rem(32);
+    font-size: rem(13);
+
+    .context_00 {
+      flex: 1.5;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .logo {
+        width: rem(150);
+        height: rem(100);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("https://w.ladicdn.com/s450x400/5b57f38472976020da8e5611/logo-ielts-trang-20230308153319-h0d4j.png");
+      }
+
+      .text_01 {
+        list-style-type: square;
+        padding-left: rem(20);
+      }
+    }
+
+    .context_01 {
+      flex: 1;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      h2 {
+        font-weight: bold;
+        font-size: rem(20);
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      li {
+        margin-top: rem(8);
+      }
+
+      a {
+        text-decoration: underline;
+        color: white;
+      }
+
+      .contact_logo {
+        display: flex;
+        gap: rem(16);
+
+        p {
+          border: 1px solid white;
+          border-radius: rem(8);
+          padding: rem(8);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    height: 100vh;
+
+    .footer {
+      flex-wrap: wrap;
+      .context_01 {
+        .contact_logo {
+          p {
+            border-radius: rem(8);
+            padding: rem(8);
+            cursor: pointer;
+            width: rem(50);
+          }
+        }
+      }
+    }
+  }
+}

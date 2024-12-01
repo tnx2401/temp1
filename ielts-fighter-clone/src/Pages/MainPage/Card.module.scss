@@ -1,0 +1,46 @@
+@use "../../assets/remConverter" as *;
+
+.card {
+  width: 30%;
+  padding: rem(20);
+  border-radius: rem(4);
+  box-shadow: 2px 4px 8px rgb(167, 166, 166);
+  background-color: rgb(255, 255, 255);
+
+  .inner_card {
+    display: flex;
+    flex-direction: column;
+    height: rem(400);
+    border: 1px solid rgb(199, 199, 199);
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    padding: rem(10);
+
+    h2 {
+      font-weight: 600;
+      font-size: rem(20);
+      margin-bottom: rem(16);
+      color: rgb(179, 76, 76);
+    }
+
+    h4 {
+      font-style: italic;
+      color: rgb(115, 110, 110);
+    }
+
+    img {
+      max-width: rem(200); /* Ensures the image doesn't exceed the card width */
+      height: rem(150); /* Maintains aspect ratio */
+      border-radius: 8px;
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    width: 40%;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 35%;
+  }
+}

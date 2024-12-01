@@ -1,0 +1,43 @@
+@use "../assets/remConverter" as *;
+
+.navigation {
+  height: rem(64);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10; // or another value higher than other elements on the page
+}
+
+.overlay_nav {
+  position: absolute;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay_nav_hidden {
+  display: none;
+}
+
+.overlay_consultancy {
+  position: absolute;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay_consultancy_hidden {
+  display: none;
+}

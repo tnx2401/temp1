@@ -1,0 +1,179 @@
+@use "../../../assets/remConverter" as *;
+
+.container {
+  padding: rem(64) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .overlay {
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.457);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .overlay_content {
+      width: 40%;
+      height: 70%;
+      background-color: aliceblue;
+      border-radius: rem(16);
+      padding: rem(16);
+      overflow-y: auto;
+      overflow-x: hidden;
+
+      h1 {
+        font-weight: bold;
+      }
+
+      p {
+        margin: rem(32) 0;
+      }
+
+      .image {
+        display: flex;
+
+        img {
+          width: 50%;
+        }
+      }
+    }
+  }
+
+  .hero_img {
+    background-image: url("https://w.ladicdn.com/s1440x638/5b57f38472976020da8e5611/banner-1-20231027025858-pylwk.png");
+    background-size: cover;
+    background-origin: content-box;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    width: 100%;
+    height: rem(600);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+  }
+
+  .content {
+    width: 960px;
+    position: relative;
+
+    .logo {
+      background-image: url("https://w.ladicdn.com/s450x450/5b57f38472976020da8e5611/cam-ket-dau-ra-20230929071009-tunlx.png");
+      width: rem(150);
+      height: rem(150);
+      background-size: contain;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .paragraph_00,
+    .paragraph_01 {
+      text-align: center;
+      font-weight: bold;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .paragraph_00 {
+      color: rgb(234, 26, 35);
+      font-size: rem(32);
+      text-transform: uppercase;
+      margin-top: rem(40);
+      transform: translateX(25%);
+    }
+
+    .paragraph_01 {
+      font-size: rem(16);
+      transform: translate(45%, 350%);
+    }
+
+    .img_00 {
+      position: absolute;
+      background-image: url("https://w.ladicdn.com/s1100x850/5b57f38472976020da8e5611/hle_0556-removebg-preview-20211104103950.png");
+      width: 100%;
+      height: rem(500);
+      background-size: contain;
+      background-repeat: no-repeat;
+      top: 0;
+      left: 0;
+      transform: translate(-25%, 20%);
+    }
+
+    .quote_block {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: rgb(255, 255, 255);
+      padding: rem(20);
+      width: 70%;
+      transform: translate(20%, 150%);
+      border-radius: rem(8);
+    }
+
+    .certification_display {
+      position: absolute;
+      display: flex;
+
+      .img_01 {
+        background-image: url("https://w.ladicdn.com/s550x550/5b57f38472976020da8e5611/370039646_316027234128005_157025451627746507_n-20230926035608-ggc5h.jpg");
+      }
+      .img_02 {
+        background-image: url("https://w.ladicdn.com/s550x550/5b57f38472976020da8e5611/369869002_316025867461475_5175124255876730675_n-20230926035334-sx5az.jpg");
+      }
+      .img_03 {
+        background-image: url("https://w.ladicdn.com/s550x550/5b57f38472976020da8e5611/369901958_316027137461348_4785544870799597063_n-20230926035430-lpxex.jpg");
+      }
+
+      .img_01,
+      .img_02,
+      .img_03 {
+        top: 0;
+        right: 0;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: rem(200);
+        height: rem(200);
+        transform: translate(235%, 190%);
+      }
+    }
+
+    .gap_fill {
+      height: rem(600);
+    }
+
+    .context_00 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: rem(50);
+
+      .card {
+        margin-bottom: rem(20);
+        cursor: pointer;
+
+        .img_04 {
+          width: 80%;
+          height: rem(200);
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        h1 {
+          width: 80%;
+          text-align: center;
+          font-weight: bold;
+          margin-top: rem(10);
+        }
+      }
+    }
+  }
+}

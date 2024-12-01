@@ -1,0 +1,135 @@
+@use "../remConverter" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+
+  h1 {
+    font-size: rem(32);
+    font-weight: bold;
+    margin: rem(48) 0;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 960px) {
+      width: 50%;
+    }
+
+    @media screen and (max-width: 480px) {
+      width: 30%;
+    }
+  }
+
+  .card_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(20);
+    justify-content: center;
+
+    .course {
+      display: flex;
+      text-align: center;
+      width: 20%;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgb(215, 208, 208);
+      box-shadow: 6px 8px 16px rgb(168, 156, 156);
+
+      div {
+        background-size: 200% 130%;
+        background-repeat: no-repeat;
+        background-position: 60%;
+        width: 100%;
+        height: rem(200);
+      }
+
+      h2 {
+        width: 100%;
+        line-height: rem(32);
+        background-color: rgb(227, 75, 75);
+        color: aliceblue;
+      }
+
+      h5 {
+        width: 100%;
+        padding: rem(10);
+        font-weight: bold;
+        color: rgb(210, 69, 69);
+      }
+
+      a {
+        width: 60%;
+        font-size: rem(10);
+        margin-top: auto;
+        border-radius: rem(6);
+        background-color: rgb(255, 132, 0);
+        color: white;
+        text-decoration: none;
+        margin-bottom: rem(16);
+        padding: rem(4);
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    @media screen and (max-width: 960px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 50%;
+
+      .course {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(215, 208, 208);
+        box-shadow: 6px 8px 16px rgb(168, 156, 156);
+
+        div {
+          background-size: 200% 140%;
+          background-repeat: no-repeat;
+          background-position: 60%;
+          width: 100%;
+          height: rem(200);
+        }
+
+        h2 {
+          width: 100%;
+          line-height: rem(32);
+          background-color: rgb(227, 75, 75);
+          color: aliceblue;
+        }
+
+        h5 {
+          width: 100%;
+          padding: rem(10);
+          font-weight: bold;
+          color: rgb(210, 69, 69);
+        }
+
+        a {
+          width: 60%;
+          font-size: rem(10);
+          margin-top: auto;
+          border-radius: rem(6);
+          background-color: rgb(255, 132, 0);
+          color: white;
+          text-decoration: none;
+          margin-bottom: rem(16);
+          padding: rem(4);
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      width: 40%;
+    }
+  }
+}

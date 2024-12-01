@@ -1,0 +1,101 @@
+@use "../assets/remConverter" as *;
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: white;
+
+  .nav_links {
+    margin: rem(16) rem(32);
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-weight: 600;
+      margin: rem(0) rem(16);
+      font-size: rem(14);
+      cursor: pointer;
+    }
+  }
+
+  .nav_buttons {
+    button {
+      border: none;
+      background-color: white;
+      margin: rem(0) rem(6);
+      border: 1px solid red;
+      padding: rem(6) rem(16);
+      border-radius: rem(24);
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn_tuvan {
+      color: red;
+    }
+
+    .btn_dangky {
+      color: white;
+      background-color: red;
+    }
+
+    .btn_tuvan,
+    .btn_dangky {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  #login {
+    font-weight: 600;
+    font-size: rem(12);
+    text-decoration: none;
+    position: absolute;
+    right: rem(32);
+    border: 1px solid gray;
+    padding: rem(8);
+    border-radius: rem(8);
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: red;
+      color: white;
+      transform: scale(1.1);
+    }
+  }
+
+  #nav_management {
+    display: none;
+  }
+
+  .logo {
+    background-image: url("https://w.ladicdn.com/s450x400/5b57f38472976020da8e5611/ielts-fighter_logo-20230307145511-ej6lb.png");
+    background-size: contain; /* Ensures the image scales to fit the div */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image within the div */
+    width: 130px; /* Set a width for the logo */
+    height: 130px; /* Set a height for the logo */
+  }
+
+  @media screen and (max-width: 960px) {
+    justify-content: space-evenly;
+
+    .nav_links {
+      display: none;
+    }
+
+    #login {
+      display: none;
+    }
+
+    #nav_management {
+      display: block;
+    }
+  }
+}
